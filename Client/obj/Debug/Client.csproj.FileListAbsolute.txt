@@ -1,0 +1,11 @@
+C:\Users\twobomb\source\repos\SuperSocketClientServer\Client\bin\Debug\Client.exe
+C:\Users\twobomb\source\repos\SuperSocketClientServer\Client\bin\Debug\Client.pdb
+C:\Users\twobomb\source\repos\SuperSocketClientServer\Client\bin\Debug\Core.dll
+C:\Users\twobomb\source\repos\SuperSocketClientServer\Client\bin\Debug\SuperSocket.ClientEngine.dll
+C:\Users\twobomb\source\repos\SuperSocketClientServer\Client\bin\Debug\SuperSocket.ProtoBase.dll
+C:\Users\twobomb\source\repos\SuperSocketClientServer\Client\bin\Debug\Core.pdb
+C:\Users\twobomb\source\repos\SuperSocketClientServer\Client\bin\Debug\SuperSocket.ProtoBase.xml
+C:\Users\twobomb\source\repos\SuperSocketClientServer\Client\obj\Debug\Client.csprojAssemblyReference.cache
+C:\Users\twobomb\source\repos\SuperSocketClientServer\Client\obj\Debug\Client.csproj.CopyComplete
+C:\Users\twobomb\source\repos\SuperSocketClientServer\Client\obj\Debug\Client.exe
+C:\Users\twobomb\source\repos\SuperSocketClientServer\Client\obj\Debug\Client.pdb
