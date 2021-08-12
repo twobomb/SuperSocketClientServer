@@ -97,7 +97,12 @@ namespace Client
             }*/
             List<Message> list = new List<Message>();
             Random rnd = new Random();
-            for (int i = 0; i < 200; i++)
+            /*byte[] buff = new byte[1024 * 1024];
+            for (int i = 0; i < 1024*1024; i++)
+            {
+                buff[i] = 1;
+            }*/
+            for (int i = 0; i < 1000; i++)
             {
                 list.Add(new Message()
                 {

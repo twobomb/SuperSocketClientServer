@@ -18,7 +18,7 @@ namespace Client.SuperSocketObjects
 
         public void Reset()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         public IReceiveFilter<DataPackageInfo> NextReceiveFilter { get; }

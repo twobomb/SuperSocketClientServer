@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using log4net;
 using Server.SuperSocketObjects;
@@ -76,7 +77,12 @@ namespace Server
 
         private static void Server_NewRequestReceived(SessionX session, DataRequestInfo requestInfo)
         {
-            Console.WriteLine("Клиент {0} прислал данные {1}  {2}",session.SessionID,requestInfo.Key,requestInfo.message.data);
+            var sizeData = 0;
+            if (requestInfo.message.data.GetType() == typeof(byte[]))
+                sizeData = ((byte[]) requestInfo.message.data).Length;
+            else
+                sizeData = Marshal.SizeOf(requestInfo.message.data);
+            Console.WriteLine("Клиент {0} прислал данные {1}  {2} ({3}byte)",session.SessionID,requestInfo.Key,requestInfo.message.data,sizeData);
         }
     }
 }
