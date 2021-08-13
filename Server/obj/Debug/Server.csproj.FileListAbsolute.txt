@@ -19,3 +19,23 @@ C:\Users\twobomb\source\repos\SuperSocketClientServer\Server\bin\Debug\SuperSock
 C:\Users\twobomb\source\repos\SuperSocketClientServer\Server\bin\Debug\SuperSocket.SocketEngine.dll
 C:\Users\twobomb\source\repos\SuperSocketClientServer\Server\bin\Debug\SuperSocket.SocketService.exe
 C:\Users\twobomb\source\repos\SuperSocketClientServer\Server\bin\Debug\SuperSocket.SocketEngine.xml
+C:\Users\User.HMARENKO\Documents\Visual Studio 2013\Projects\SuperSocketClientServer\SuperSocketClientServer\Server\obj\Debug\Server.exe
+C:\Users\User.HMARENKO\Documents\Visual Studio 2013\Projects\SuperSocketClientServer\SuperSocketClientServer\Server\obj\Debug\Server.pdb
+C:\Users\User.HMARENKO\Documents\Visual Studio 2013\Projects\SuperSocketClientServer\SuperSocketClientServer\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+C:\Users\User.HMARENKO\Documents\Visual Studio 2013\Projects\SuperSocketClientServer\SuperSocketClientServer\Server\bin\Debug\Server.exe
+C:\Users\User.HMARENKO\Documents\Visual Studio 2013\Projects\SuperSocketClientServer\SuperSocketClientServer\Server\bin\Debug\Server.pdb
+C:\Users\User.HMARENKO\Documents\Visual Studio 2013\Projects\SuperSocketClientServer\SuperSocketClientServer\Server\bin\Debug\Core.dll
+C:\Users\User.HMARENKO\Documents\Visual Studio 2013\Projects\SuperSocketClientServer\SuperSocketClientServer\Server\bin\Debug\log4net.dll
+C:\Users\User.HMARENKO\Documents\Visual Studio 2013\Projects\SuperSocketClientServer\SuperSocketClientServer\Server\bin\Debug\SuperSocket.Common.dll
+C:\Users\User.HMARENKO\Documents\Visual Studio 2013\Projects\SuperSocketClientServer\SuperSocketClientServer\Server\bin\Debug\SuperSocket.Facility.dll
+C:\Users\User.HMARENKO\Documents\Visual Studio 2013\Projects\SuperSocketClientServer\SuperSocketClientServer\Server\bin\Debug\SuperSocket.ProtoBase.dll
+C:\Users\User.HMARENKO\Documents\Visual Studio 2013\Projects\SuperSocketClientServer\SuperSocketClientServer\Server\bin\Debug\SuperSocket.SocketBase.dll
+C:\Users\User.HMARENKO\Documents\Visual Studio 2013\Projects\SuperSocketClientServer\SuperSocketClientServer\Server\bin\Debug\SuperSocket.SocketEngine.dll
+C:\Users\User.HMARENKO\Documents\Visual Studio 2013\Projects\SuperSocketClientServer\SuperSocketClientServer\Server\bin\Debug\SuperSocket.SocketService.exe
+C:\Users\User.HMARENKO\Documents\Visual Studio 2013\Projects\SuperSocketClientServer\SuperSocketClientServer\Server\bin\Debug\Core.pdb
+C:\Users\User.HMARENKO\Documents\Visual Studio 2013\Projects\SuperSocketClientServer\SuperSocketClientServer\Server\bin\Debug\log4net.xml
+C:\Users\User.HMARENKO\Documents\Visual Studio 2013\Projects\SuperSocketClientServer\SuperSocketClientServer\Server\bin\Debug\SuperSocket.Common.xml
+C:\Users\User.HMARENKO\Documents\Visual Studio 2013\Projects\SuperSocketClientServer\SuperSocketClientServer\Server\bin\Debug\SuperSocket.Facility.xml
+C:\Users\User.HMARENKO\Documents\Visual Studio 2013\Projects\SuperSocketClientServer\SuperSocketClientServer\Server\bin\Debug\SuperSocket.ProtoBase.xml
+C:\Users\User.HMARENKO\Documents\Visual Studio 2013\Projects\SuperSocketClientServer\SuperSocketClientServer\Server\bin\Debug\SuperSocket.SocketBase.xml
+C:\Users\User.HMARENKO\Documents\Visual Studio 2013\Projects\SuperSocketClientServer\SuperSocketClientServer\Server\bin\Debug\SuperSocket.SocketEngine.xml

@@ -50,7 +50,7 @@
     <Compile Include="ClientMain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SuperSocketObjects\DataPackageInfo.cs" />
-    <Compile Include="SuperSocketObjects\RecieveFilterX.cs" />
+    <Compile Include="SuperSocketObjects\FixedRecieveFilterX.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

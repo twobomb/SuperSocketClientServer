@@ -69,7 +69,7 @@
   <ItemGroup>
     <Compile Include="ServerMain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SuperSocketObjects\DataRecieveFilter.cs" />
+    <Compile Include="SuperSocketObjects\DataFixedRecieveFilter.cs" />
     <Compile Include="SuperSocketObjects\DataRequestInfo.cs" />
     <Compile Include="SuperSocketObjects\MyServer.cs" />
     <Compile Include="SuperSocketObjects\SessionX.cs" />

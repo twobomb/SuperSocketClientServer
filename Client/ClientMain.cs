@@ -22,7 +22,8 @@ namespace Client
             client.Closed += EasyClient_Closed;
             client.Connected += EasyClient_Connected;
             client.Error += EasyClient_Error;
-            client.Initialize(new RecieveFilterX(),MessageRecieved);
+            
+            client.Initialize(new FixedRecieveFilterX(), MessageRecieved);
             Console.WriteLine("Клиент инициализирован");
             client.ConnectAsync(new DnsEndPoint("localhost", 2021));
             Console.ReadKey();
@@ -44,7 +45,6 @@ namespace Client
                 ms.Seek(0, SeekOrigin.Begin);
                 ms.Write(BitConverter.GetBytes(ms.Length - 4), 0, 4);
                 ms.Seek(0, SeekOrigin.End);
-                Console.WriteLine("send data size"+(ms.Length - 4));
                 client.Send(ms.ToArray());
             }
         }
@@ -75,7 +75,7 @@ namespace Client
 
         private static void MessageRecieved(DataPackageInfo obj)
         {
-            Console.WriteLine("I reecieve message {0} ",obj.Data);
+            Console.WriteLine("I reecieve message {0} - {1}", (obj.Data as Message).key, (obj.Data as Message).data);
         }
 
         private static void EasyClient_Error(object sender, ErrorEventArgs e)
@@ -86,31 +86,16 @@ namespace Client
         private static void EasyClient_Connected(object sender, EventArgs e)
         {
             Console.WriteLine("Клиент подключен");
-            /*Random rnd = new Random();
-            for (int i = 0; i < 200; i++)
+            Random rnd = new Random();
+            for (int i = 0; i < 100; i++)
             {
                 SendMessage(new Message()
                 {
-                    key = "myheader"+ rnd.Next(100000),
-                    data = rnd.Next(100000)
-                });
-            }*/
-            List<Message> list = new List<Message>();
-            Random rnd = new Random();
-            /*byte[] buff = new byte[1024 * 1024];
-            for (int i = 0; i < 1024*1024; i++)
-            {
-                buff[i] = 1;
-            }*/
-            for (int i = 0; i < 1000; i++)
-            {
-                list.Add(new Message()
-                {
-                    key = "myheader"+ rnd.Next(100000),
+                    key = "myheader" + rnd.Next(100000),
                     data = i
                 });
             }
-            SendMessages(list);
+
         }
 
         private static void EasyClient_Closed(object sender, EventArgs e)

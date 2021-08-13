@@ -10,7 +10,8 @@ namespace Server.SuperSocketObjects
     public class MyServer : AppServer<SessionX, DataRequestInfo>
     {
 
-        public MyServer(): base(new DefaultReceiveFilterFactory<DataRecieveFilter, DataRequestInfo>())
+        public MyServer()
+            : base(new DefaultReceiveFilterFactory<DataFixedRecieveFilter, DataRequestInfo>())
         {
 
         }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using Core;
 using log4net;
 using Server.SuperSocketObjects;
 using SuperSocket.SocketBase;
@@ -17,16 +18,17 @@ namespace Server
             (System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         public static void Main(string[] args) {
             MyServer server = new MyServer();
-
+            
             if (!server.Setup(new ServerConfig()
             {
                 Port = 2021,
                 Name = "MyServer",
+                MaxRequestLength = 1024*1024*100,
                 Mode = SocketMode.Tcp,
                 TextEncoding = "UTF-8",
                 Ip = "any"
-                }/*,null,null,
-                new ConsoleLogFactory()*/))
+                },null,null,
+                new ConsoleLogFactory()))
             {
 
                 Console.ForegroundColor = ConsoleColor.Red;
@@ -77,12 +79,10 @@ namespace Server
 
         private static void Server_NewRequestReceived(SessionX session, DataRequestInfo requestInfo)
         {
-            var sizeData = 0;
-            if (requestInfo.message.data.GetType() == typeof(byte[]))
-                sizeData = ((byte[]) requestInfo.message.data).Length;
-            else
-                sizeData = Marshal.SizeOf(requestInfo.message.data);
-            Console.WriteLine("Клиент {0} прислал данные {1}  {2} ({3}byte)",session.SessionID,requestInfo.Key,requestInfo.message.data,sizeData);
+            Console.WriteLine("Клиент {0} прислал данные {1}  {2} ",session.SessionID,requestInfo.Key,requestInfo.message.data);
+
+            session.SendMessage(requestInfo.message);
+
         }
     }
 }

@@ -9,3 +9,13 @@ C:\Users\twobomb\source\repos\SuperSocketClientServer\Client\obj\Debug\Client.cs
 C:\Users\twobomb\source\repos\SuperSocketClientServer\Client\obj\Debug\Client.csproj.CopyComplete
 C:\Users\twobomb\source\repos\SuperSocketClientServer\Client\obj\Debug\Client.exe
 C:\Users\twobomb\source\repos\SuperSocketClientServer\Client\obj\Debug\Client.pdb
+C:\Users\User.HMARENKO\Documents\Visual Studio 2013\Projects\SuperSocketClientServer\SuperSocketClientServer\Client\obj\Debug\Client.exe
+C:\Users\User.HMARENKO\Documents\Visual Studio 2013\Projects\SuperSocketClientServer\SuperSocketClientServer\Client\obj\Debug\Client.pdb
+C:\Users\User.HMARENKO\Documents\Visual Studio 2013\Projects\SuperSocketClientServer\SuperSocketClientServer\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\Users\User.HMARENKO\Documents\Visual Studio 2013\Projects\SuperSocketClientServer\SuperSocketClientServer\Client\bin\Debug\Client.exe
+C:\Users\User.HMARENKO\Documents\Visual Studio 2013\Projects\SuperSocketClientServer\SuperSocketClientServer\Client\bin\Debug\Client.pdb
+C:\Users\User.HMARENKO\Documents\Visual Studio 2013\Projects\SuperSocketClientServer\SuperSocketClientServer\Client\bin\Debug\Core.dll
+C:\Users\User.HMARENKO\Documents\Visual Studio 2013\Projects\SuperSocketClientServer\SuperSocketClientServer\Client\bin\Debug\SuperSocket.ClientEngine.dll
+C:\Users\User.HMARENKO\Documents\Visual Studio 2013\Projects\SuperSocketClientServer\SuperSocketClientServer\Client\bin\Debug\SuperSocket.ProtoBase.dll
+C:\Users\User.HMARENKO\Documents\Visual Studio 2013\Projects\SuperSocketClientServer\SuperSocketClientServer\Client\bin\Debug\Core.pdb
+C:\Users\User.HMARENKO\Documents\Visual Studio 2013\Projects\SuperSocketClientServer\SuperSocketClientServer\Client\bin\Debug\SuperSocket.ProtoBase.xml
