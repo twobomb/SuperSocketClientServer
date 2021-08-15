@@ -14,21 +14,24 @@ namespace Server
 {
     class ServerMain
     {
-        private static readonly log4net.ILog log = log4net.LogManager.GetLogger
-            (System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
         public static void Main(string[] args) {
             MyServer server = new MyServer();
             
             if (!server.Setup(new ServerConfig()
             {
                 Port = 2021,
+                KeepAliveTime = 10,
                 Name = "MyServer",
-                MaxRequestLength = 1024*1024*100,
+                SendTimeOut = 10000,//ms
+                MaxConnectionNumber = 150,//Максимальное количество одновременных подключений
+                MaxRequestLength = 1024*1024,//Максимально допустимая длина запроса 
+                SendingQueueSize = 100,//максимальный размер очереди отправки
                 Mode = SocketMode.Tcp,
                 TextEncoding = "UTF-8",
                 Ip = "any"
                 },null,null,
-                new ConsoleLogFactory()))
+                new ConsoleLogFactory()))//Логирование в консоль
             {
 
                 Console.ForegroundColor = ConsoleColor.Red;
@@ -63,10 +66,14 @@ namespace Server
             do
             {
                 keyInfo = Console.ReadKey().Key;
-                /*switch (keyInfo)
-                {
-                    
-                }*/
+                switch (keyInfo) {
+                    case ConsoleKey.C:
+                        Console.WriteLine("");
+                        Console.WriteLine("Активных сессий: {0} ",server.SessionCount);
+                        foreach (var sessionXe in server.GetAllSessions()) 
+                            Console.WriteLine("\t{0} {1}",sessionXe.SessionID,sessionXe.SocketSession.Client.RemoteEndPoint);
+                        break;
+                }
             }
             while (keyInfo != ConsoleKey.Q) ;
 

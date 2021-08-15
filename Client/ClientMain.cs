@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Sockets;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
+using System.Threading;
 using Client.SuperSocketObjects;
 using Core;
 using SuperSocket.ClientEngine;
@@ -18,6 +20,7 @@ namespace Client
         static void Main(string[] args)
         {
             client = new EasyClient();
+            client.ReceiveBufferSize = 10240;
             client.NoDelay = true;
             client.Closed += EasyClient_Closed;
             client.Connected += EasyClient_Connected;
@@ -26,7 +29,14 @@ namespace Client
             client.Initialize(new FixedRecieveFilterX(), MessageRecieved);
             Console.WriteLine("Клиент инициализирован");
             client.ConnectAsync(new DnsEndPoint("localhost", 2021));
-            Console.ReadKey();
+            while (Console.ReadKey().Key != ConsoleKey.Q)
+            {
+                SendMessage(new Message()
+                {
+                    data = "testmsg",
+                    key = "test"
+                });
+            }
         }
 
         public static void SendMessage(Message msg){
@@ -83,8 +93,7 @@ namespace Client
             Console.WriteLine("Возникла ошибка: {0}",e.Exception.Message);
         }
 
-        private static void EasyClient_Connected(object sender, EventArgs e)
-        {
+        private static void EasyClient_Connected(object sender, EventArgs e){
             Console.WriteLine("Клиент подключен");
             Random rnd = new Random();
             for (int i = 0; i < 100; i++)
@@ -98,9 +107,7 @@ namespace Client
 
         }
 
-        private static void EasyClient_Closed(object sender, EventArgs e)
-        {
-            
+        private static void EasyClient_Closed(object sender, EventArgs e) {
             Console.WriteLine("Клиент отключен");
         }
     }
