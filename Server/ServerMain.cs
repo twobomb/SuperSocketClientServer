@@ -27,6 +27,7 @@ namespace Server
                 MaxConnectionNumber = 150,//Максимальное количество одновременных подключений
                 MaxRequestLength = 1024*1024,//Максимально допустимая длина запроса 
                 SendingQueueSize = 100,//максимальный размер очереди отправки
+                DisableSessionSnapshot = true,// ВАЖНО если не отключить, то снимок сеансов делается раз в sessionSnapshotInterval (5сек по умолчанию), и метод GetAllSession() выдает не актуальные данные пока не сделется новый снимок
                 Mode = SocketMode.Tcp,
                 TextEncoding = "UTF-8",
                 Ip = "any"
